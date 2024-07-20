@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="688.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trs.controllers.AdminActionController">
+    <ImageView fitHeight="688.0" fitWidth="827.0" pickOnBounds="true">
+        <Image url="@../images/AdminHomePage.jpg" />
+    </ImageView>
+    <Label layoutX="312.0" layoutY="49.0" text="Select Action" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="31.0" />
+        </font>
+    </Label>
+    <Button fx:id="manageTrainButton" layoutX="579.0" layoutY="491.0" mnemonicParsing="false" onAction="#viewTrain" prefHeight="66.0" prefWidth="224.0" text="Manage Train">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Button>
+    <Button fx:id="manageTicketButton" layoutX="304.0" layoutY="320.0" mnemonicParsing="false" onAction="#viewTicket" prefHeight="66.0" prefWidth="224.0" text="Manage Ticket">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Button>
+    <Button fx:id="manageOfficerButton" layoutX="31.0" layoutY="167.0" mnemonicParsing="false" onAction="#viewOfficer" prefHeight="67.0" prefWidth="228.0" text="Manage Officer">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Button>
+    <Button fx:id="exitButton" layoutX="342.0" layoutY="571.0" mnemonicParsing="false" onAction="#exit" prefHeight="56.0" prefWidth="131.0" text="Logout">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+    </Button>
+</AnchorPane>

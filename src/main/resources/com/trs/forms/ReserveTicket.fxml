@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="569.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.trs.controllers.ReserveTicketController">
+    <ImageView fitHeight="576.0" fitWidth="726.0" layoutX="-2.0" layoutY="-3.0" pickOnBounds="true">
+        <effect>
+            <ColorAdjust brightness="-0.24"/>
+        </effect>
+        <Image url="@../images/AddTicket.jpg"/>
+    </ImageView>
+    <Label fx:id="label" layoutX="136.0" layoutY="130.0" minHeight="16" minWidth="69"/>
+    <Label alignment="CENTER" layoutX="90.0" layoutY="21.0" prefHeight="52.0" prefWidth="512.0"
+           text="Ticket Reservation" textFill="WHITE">
+        <font>
+            <Font name="System Bold Italic" size="40.0"/>
+        </font>
+    </Label>
+    <Label layoutX="25.0" layoutY="113.0" text="Train Number :-" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Label layoutX="26.0" layoutY="247.0" text="Degree:-" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Label layoutX="25.0" layoutY="182.0" text="Reservation Date :-" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Label layoutX="26.0" layoutY="389.0" text="Total Price :-" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <Button fx:id="bookButton" layoutX="534.0" layoutY="470.0" mnemonicParsing="false" onAction="#bookHandle"
+            prefHeight="60.0" prefWidth="126.0" text="Book">
+        <font>
+            <Font name="System Bold" size="28.0"/>
+        </font>
+    </Button>
+    <Label layoutX="26.0" layoutY="296.0" text="Number of Tickets :-" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="ticketsNumberTextField" layoutX="246.0" layoutY="296.0" onAction="#HandleTotalPrice"
+               onKeyTyped="#updateTotalPrice" prefHeight="26.0" prefWidth="79.0"/>
+    <Button fx:id="backButton" layoutX="42.0" layoutY="470.0" mnemonicParsing="false" onAction="#backHandle"
+            prefHeight="58.0" prefWidth="126.0" text="Back">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Button>
+    <ComboBox fx:id="degreeComboBox" layoutX="251.0" layoutY="249.0" onAction="#classPickerComboBoxHandle"
+              prefHeight="28.0" prefWidth="173.0"/>
+    <DatePicker fx:id="reservationDatePicker" layoutX="246.0" layoutY="186.0" prefHeight="26.0" prefWidth="207.0"/>
+    <Label layoutX="42.0" layoutY="351.0" text="Price :" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="20.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="singlePriceTextField" disable="true" editable="false" layoutX="246.0" layoutY="340.0"
+               prefHeight="26.0" prefWidth="79.0"/>
+    <Label fx:id="totalPriceLabel" layoutX="251.0" layoutY="389.0" text="000" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="24.0"/>
+        </font>
+    </Label>
+    <ComboBox fx:id="trainPickerComboBox" layoutX="219.0" layoutY="118.0" onAction="#trainPickerComboBoxHandle"
+              prefHeight="28.0" prefWidth="216.0"/>
+</AnchorPane>

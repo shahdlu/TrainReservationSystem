@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="621.0" prefWidth="705.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.trs.controllers.ManageTrainController">
+    <children>
+        <ImageView fitHeight="621.0" fitWidth="759.0" pickOnBounds="true">
+            <image>
+                <Image url="@../images/AdminHomePage.jpg"/>
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.22"/>
+            </effect>
+        </ImageView>
+        <Label layoutX="371.0" layoutY="134.0" text="Max Capacity :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="5.0" layoutY="134.0" text="Train Number :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="maxCapacityTextField" layoutX="511.0" layoutY="132.0" prefHeight="31.0" prefWidth="123.0"/>
+        <TextField fx:id="trainNumberTextField" layoutX="173.0" layoutY="132.0" prefHeight="31.0" prefWidth="123.0"/>
+        <Label layoutX="380.0" layoutY="333.0" text="Departure Time :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="380.0" layoutY="386.0" prefHeight="27.0" prefWidth="123.0" text="Arrival Time :-"
+               textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="4.0" layoutY="179.0" text="Departure Station :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <Label layoutX="370.0" layoutY="179.0" text="Arrival Station:-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="departureHourTextField" layoutX="539.0" layoutY="333.0" prefHeight="25.0" prefWidth="35.0"/>
+        <TextField fx:id="departureStationTextField" layoutX="173.0" layoutY="177.0" prefHeight="25.0"
+                   prefWidth="123.0"/>
+        <TextField fx:id="arrivalStationTextField" layoutX="510.0" layoutY="177.0" prefHeight="25.0" prefWidth="123.0"/>
+        <TextField fx:id="arrivalHourTextField" layoutX="539.0" layoutY="384.0" prefHeight="25.0" prefWidth="35.0"/>
+        <Button fx:id="addtrainButton" layoutX="189.0" layoutY="525.0" mnemonicParsing="false" onAction="#addTrain"
+                prefHeight="48.0" prefWidth="114.0" text="Add Train">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Button>
+        <Button fx:id="exitButton" layoutX="455.0" layoutY="524.0" mnemonicParsing="false" onAction="#exitHandle"
+                prefHeight="50.0" prefWidth="123.0" text="EXIT">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Button>
+        <Label layoutX="7.0" layoutY="226.0" text="Standard Price:-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="standardPriceTextField" layoutX="175.0" layoutY="227.0" prefHeight="31.0" prefWidth="123.0"/>
+        <Label layoutX="254.0" layoutY="27.0" text="Manage Train" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0"/>
+            </font>
+        </Label>
+        <Label layoutX="370.0" layoutY="229.0" text="Type:-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="typeTextField" layoutX="513.0" layoutY="224.0" prefHeight="31.0" prefWidth="123.0"/>
+        <TextField fx:id="departureMinuteTextField" layoutX="590.0" layoutY="333.0" prefHeight="25.0" prefWidth="35.0"/>
+        <TextField fx:id="arrivalMinuteTextField" layoutX="590.0" layoutY="384.0" prefHeight="25.0" prefWidth="35.0"/>
+        <Label layoutX="545.0" layoutY="311.0" text="H" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="17.0"/>
+            </font>
+        </Label>
+        <Label layoutX="595.0" layoutY="311.0" text="M" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="17.0"/>
+            </font>
+        </Label>
+        <Label layoutX="576.0" layoutY="320.0" prefHeight="17.0" prefWidth="28.0" text=":" textFill="WHITE">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Label>
+        <Label layoutX="576.0" layoutY="373.0" prefHeight="17.0" prefWidth="28.0" text=":" textFill="WHITE">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="departureDatePicker" layoutX="144.0" layoutY="331.0" prefHeight="31.0" prefWidth="211.0"/>
+        <Label layoutX="7.0" layoutY="335.0" text="Departure Date" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="arrivalDatePicker" layoutX="144.0" layoutY="384.0" prefHeight="31.0" prefWidth="211.0"/>
+        <Label layoutY="386.0" text="Arrival Date" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

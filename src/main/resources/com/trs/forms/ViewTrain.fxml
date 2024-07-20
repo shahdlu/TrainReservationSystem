@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="527.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trs.controllers.ViewTrainController">
+    <ImageView fitHeight="527.0" fitWidth="723.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../images/train1.jpg" />
+    </ImageView>
+    <TableView fx:id="trainTable" prefHeight="400.0" prefWidth="202.0">
+        <columns>
+            <TableColumn fx:id="trainNumberColumn" prefWidth="95.20001220703125" text="Train Number" />
+            <TableColumn fx:id="trainTypeColumn" prefWidth="104.0" text="Train Type" />
+        </columns>
+    </TableView>
+    <Button fx:id="addTrainBtn" layoutX="24.0" layoutY="404.0" mnemonicParsing="false" onAction="#viewAddTrainPage" prefHeight="40.0" prefWidth="71.0" text="New">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Button>
+    <Button fx:id="editTrainBtn" layoutX="126.0" layoutY="404.0" mnemonicParsing="false" onAction="#viewEditTrainPage" prefHeight="40.0" prefWidth="75.0" text="Edit">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Button>
+    <Button fx:id="deleteTrainBtn" layoutX="124.0" layoutY="451.0" mnemonicParsing="false" onAction="#deleteSelectedTrain" prefHeight="34.0" prefWidth="79.0" text="Delete" textOverrun="WORD_ELLIPSIS">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Button>
+    <Label layoutX="214.0" layoutY="107.0" prefHeight="27.0" prefWidth="72.0" text="Time :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="210.0" layoutY="224.0" text="Time :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="214.0" layoutY="72.0" text="Station :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="210.0" layoutY="189.0" text="Station :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="212.0" layoutY="303.0" prefHeight="27.0" prefWidth="110.0" text="Total Seats :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="departureStationL" layoutX="296.0" layoutY="72.0" prefHeight="27.0" prefWidth="210.0" text="               ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="arrivalTimeL" layoutX="281.0" layoutY="224.0" prefHeight="27.0" prefWidth="202.0" text="      ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="arrivalStationL" layoutX="293.0" layoutY="189.0" prefHeight="27.0" prefWidth="217.0" text="           ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="departureTimeL" layoutX="285.0" layoutY="107.0" prefHeight="27.0" prefWidth="286.0" text="         ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="maximumCapacityL" layoutX="339.0" layoutY="303.0" text="        ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Button fx:id="backBtn" layoutX="28.0" layoutY="451.0" mnemonicParsing="false" onAction="#viewSelectActionPage" text="Back">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Button>
+    <Label layoutX="212.0" layoutY="346.0" text="Standard Ticket Price :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="priceL" layoutX="414.0" layoutY="346.0" prefHeight="27.0" prefWidth="64.0" text="      ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="376.0" layoutY="25.0" text="Departure">
+        <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+        </font>
+    </Label>
+    <Label layoutX="379.0" layoutY="152.0" text="Arrival">
+        <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+        </font>
+    </Label>
+    <Label layoutX="414.0" layoutY="303.0" prefHeight="27.0" prefWidth="98.0" text="Seats left :">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+    <Label fx:id="currentCapacityLabel" layoutX="512.0" layoutY="303.0" text="        ">
+        <font>
+            <Font name="System Bold" size="18.0" />
+        </font>
+    </Label>
+   <Button fx:id="reserveTicket" layoutX="532.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleTicketReserve" prefHeight="53.0" prefWidth="124.0" text="Reserve Ticket" />
+</AnchorPane>

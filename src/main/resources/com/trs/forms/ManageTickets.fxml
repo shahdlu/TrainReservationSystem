@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="572.0" prefWidth="660.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.trs.controllers.ManageTicketsController">
+    <children>
+        <ImageView fitHeight="575.0" fitWidth="684.0" layoutY="-3.0" pickOnBounds="true">
+            <image>
+                <Image url="@../images/AddTarin.jpg"/>
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.22"/>
+            </effect>
+        </ImageView>
+        <Label fx:id="label" layoutX="100.0" layoutY="137.0" minHeight="16" minWidth="69"/>
+        <Label alignment="CENTER" layoutX="86.0" layoutY="14.0" prefHeight="52.0" prefWidth="512.0"
+               text="Manage Tickets" textFill="#f8f8f8">
+            <font>
+                <Font name="Arial Bold" size="40.0"/>
+            </font>
+        </Label>
+        <Label layoutX="7.0" layoutY="94.0" text="Train Number  :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="7.0" layoutY="208.0" text="Degree:-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="7.0" layoutY="156.0" text="Reservation Date :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="344.0" text="Total Price :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="23.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="trainNumberTextField" layoutX="227.0" layoutY="96.0" prefHeight="31.0" prefWidth="206.0"/>
+        <TextField fx:id="degreeTextField" layoutX="226.0" layoutY="210.0" prefHeight="26.0" prefWidth="206.0"/>
+        <TextField fx:id="totalPriceTextField" layoutX="226.0" layoutY="345.0" prefHeight="31.0" prefWidth="206.0"/>
+        <Button fx:id="editButton" layoutX="94.0" layoutY="478.0" mnemonicParsing="false" onAction="#editHandel"
+                prefHeight="62.0" prefWidth="150.0" text="Edit">
+            <font>
+                <Font name="System Bold" size="29.0"/>
+            </font>
+        </Button>
+        <Button fx:id="cancelButton" layoutX="465.0" layoutY="478.0" mnemonicParsing="false" onAction="#cancelhandle"
+                prefHeight="63.0" prefWidth="133.0" text="Cancel">
+            <font>
+                <Font name="System Bold" size="26.0"/>
+            </font>
+        </Button>
+        <Label layoutX="7.0" layoutY="274.0" text="Number of Tickets :-" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="ticketNumberTextField" layoutX="226.0" layoutY="274.0" prefHeight="31.0" prefWidth="206.0"/>
+        <DatePicker fx:id="reserveDateTimePicker" layoutX="227.0" layoutY="156.0" prefHeight="31.0" prefWidth="206.0"/>
+    </children>
+</AnchorPane>
